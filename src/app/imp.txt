@@ -1,0 +1,23 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import bg_image from "@/../public/cool-bgimage.avif";
+
+export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    document.body.classList.add("bg-image"); // Add the CSS class to the body element
+    return () => {
+      document.body.classList.remove("bg-image"); // Remove the CSS class when the component is unmounted
+    };
+  }, []);
+
+  // Rest of your code...
+
+  return (
+    <div>
+      {/* Your JSX code */}
+    </div>
+  );
+}
